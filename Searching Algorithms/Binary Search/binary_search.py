@@ -4,9 +4,6 @@
 def binary_search(arr,key):
     start = 0
     end = len(arr) - 1
-    mid = (start + end) // 2
-    if arr[mid] == key:
-        return mid
     while end >= start:
         mid = (start + end) // 2
         if arr[mid] == key:
@@ -18,7 +15,7 @@ def binary_search(arr,key):
 
 #sample test case        
 arr= [10,12,15,19,25,30]
-print(binary_search(arr,11))
+print(binary_search(arr,10))
 
 #Time Complexity: O(log(n))
 #Space Complexity: O(1)
