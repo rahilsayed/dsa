@@ -1,0 +1,6 @@
+1. It uses 2 lists: a sorted and an unsorted list.
+2. The first element is considered to be sorted. Hence a sorted list of first element in generated.
+3. Then, the first element from the unsorted list i.e the remaining list is inserted into the correct position in the sorted list by SHIFTING ALL VALUES GREATER THAN IT TO THE RIGHT.
+4. This algorithm is a bit tricky to understand than bubble or selection, but is quite easy to use after understanding.
+5. The difference between selection and insertion sort is that in selection sort we take the minimum number in unsorted array, while, in insertion sort, we take a starting number of the unsorted array.
+6. Overall, it starts creating a sorted list by shifting elements

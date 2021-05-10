@@ -1,0 +1,4 @@
+1. It is the simplest sorting algorithm, but also quite slow.
+2. Bubble sort works by repeatedly swapping the adjacent elements if they are in wrong order.
+3. Each iteration results in the largest element being swapped at the last position.
+4. Hence, at each iteration, we reduce the range of sorting iteration by 1 position from last.

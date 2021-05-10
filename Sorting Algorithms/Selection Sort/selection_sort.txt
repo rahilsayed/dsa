@@ -1,0 +1,4 @@
+1. This algorithm divides the list in two part: a sorted part and an unsorted part.
+2. A minimum element is repeatedly selected from the unsorted list and place it in sorted part, until the unsorted list is finished and we are only left with the sorted part.
+3. The difference between selection and insertion sort is that in selection sort we take the minimum number in unsorted array, while, in insertion sort, we take a starting number of the unsorted array.
+4. Overall, it starts creating a sorted list by orderly by minimum values (in contrast to insertion that uses shifting) 
