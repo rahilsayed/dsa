@@ -1,0 +1,2 @@
+1. Linear Seach follows a simple linear traversal strategy
+2. It works on sorted as well as unsorted arrays
