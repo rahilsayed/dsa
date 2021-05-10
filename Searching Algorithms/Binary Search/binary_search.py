@@ -1,4 +1,4 @@
-#Author: RahIL Sayed
+#Author: Rahil Sayed
 #Date: 05/10/2021
 
 def binary_search(arr,key):
