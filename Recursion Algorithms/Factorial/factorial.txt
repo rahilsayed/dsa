@@ -1,0 +1,33 @@
+Time Complexity:
+
+Let T(n) be the time complexity of the algorithm.
+Hence, T(n) = T(n - 1) + 3 (for one call)
+Therefore, T(n) = T(n - 1) + 3
+                  T(n - 2) + 6
+                  T(n - 3) + 9
+                  T(n - 4) + 12
+                  .
+                  .
+                  .
+                  T(n - k) + 3k
+This continues till k becomes n.
+Therefore, T(n) = T(0) + 3n
+                = 1 + 3n
+                = T(n)
+Time Complexity: T(n)
+
+
+Space Complexity: 
+
+f(6) → f(5) → f(4) → f(3) → f(2) → f(1) → f(0)
+f(6) → f(5) → f(4) → f(3) → f(2) → f(1)
+f(6) → f(5) → f(4) → f(3) → f(2)
+f(6) → f(5) → f(4) → f(3)
+f(6) → f(5) → f(4)
+f(6) → f(5)
+f(6)
+
+The function in bold is the one currently being executed. 
+As you can see for f(6) a stack of 6 is required till the call is made to f(0) and a value is finally computed. 
+Hence for factorial of N, a stack of size N will be implicitly allocated for storing the state of the function calls.
+The space complexity of recursive factorial implementation is O(n)

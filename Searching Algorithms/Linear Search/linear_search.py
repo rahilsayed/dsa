@@ -1,5 +1,5 @@
 #Author: Rahil Sayed
-#Date: 05/10/2021
+#Date: 10/05/2021
 
 def linear_search(arr,key):
     for i in range(len(arr)):
