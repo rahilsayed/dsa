@@ -1,0 +1,44 @@
+The Towers of Hanoi problem is a famous one in recursion. The problem is defined as follows:
+
+There are a total of 3 poles and a stack of disks on the initial pole. We have to move all the discks from the source pole, to the destination pole, using the the helper pole.
+
+However, we must always keep the following in mind:
+
+    a. At any time, on any pole, a larger disk can’t be on top of a smaller disk
+    b. We can move only one disk at a time
+
+We use recursion to solve it. As is the case with recursion, we need 2 things: the base case and the recursive case.
+The base case here is easy: when we have only 1 disc to move, then we move it to it’s destination.
+However, what is the recursive case?
+Let’s say there are N discs. If we can somehow move N-1 discs to the helper pole, then we can easily move our Nth disc, i.e the largest disc, to the destination pole (using our base case).
+But how do we move N-1 discs to the helper pole? Well, we use recursion! We can move N-1 discs to our helper pole using the destination pole as a helper.
+How do we move the N-1 discs in the above manner? We solve for N-2 and so on…
+
+
+Time Complexity: 
+Let the time required for n disks is T(n) .
+There are 2 recursive call for n-1 disks and one constant time operation to move a disk
+from ‘from’ peg to ‘to’ peg . Let it be k1.
+Therefore,
+T(n) = 2 T(n-1) + k1
+T(0) = k2 , a constant.
+T(1) = 2 k2 + k1
+T(2) = 4 k2 + 2k1 + k1
+T(2) = 8 k2 + 4k1 + 2k1 + k1
+Coefficient of k1 =2^n
+Coefficient of k2 =2^n-1
+Time complexity is O(2^n) or O(a^n) where a is a constant greater than 1.
+So it has exponential time complexity
+
+Space Complexity:
+Space for parameter for each call is independent of n i.e., constant. Let it be k .
+When we do the 2nd recursive call 1st recursive call is over . So, we can reuse the space of
+1st call for 2nd call . Hence ,
+T(n) = T(n-1) + k
+T(0) = k
+T(1) = 2k
+T(2) = 3k
+T(3) = 4k
+So the space complexity is O(n).
+Here time complexity is exponential but space complexity is linear . Often there is a trade
+off between time and space complexity . 
