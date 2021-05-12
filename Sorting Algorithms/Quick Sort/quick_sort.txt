@@ -1,0 +1,46 @@
+Quicksort is a sorting algorithm based on the divide and conquer approach where: 
+
+    1. An array is divided into subarrays by selecting a pivot element (element selected from the array).
+    2. While dividing the array, the pivot element should be positioned in such a way that elements less than pivot are kept on the left side and elements greater than pivot are on the right side of the pivot.
+    3. The left and right subarrays are also divided using the same approach. This process continues until each subarray contains a single element.
+    4. At this point, elements are already sorted. Finally, elements are combined to form a sorted array.
+
+
+Algorithm:
+
+quickSort(array, leftmostIndex, rightmostIndex)
+  if (leftmostIndex < rightmostIndex)
+    pivotIndex <- partition(array,leftmostIndex, rightmostIndex)
+    quickSort(array, leftmostIndex, pivotIndex - 1)
+    quickSort(array, pivotIndex, rightmostIndex)
+
+partition(array, leftmostIndex, rightmostIndex)
+  set rightmostIndex as pivotIndex
+  storeIndex <- leftmostIndex - 1
+  for i <- leftmostIndex + 1 to rightmostIndex
+  if element[i] < pivotElement
+    swap element[i] and element[storeIndex]
+    storeIndex++
+  swap pivotElement and element[storeIndex+1]
+return storeIndex + 1
+
+
+Time Complexity:
+
+    Worst Case Complexity [Big-O]: O(n2)
+        It occurs when the pivot element picked is either the greatest or the smallest element.
+        This condition leads to the case in which the pivot element lies in an extreme end of the sorted array. One sub-array is always empty and another sub-array contains n - 1 elements. Thus, quicksort is called only on this sub-array.
+        However, the quicksort algorithm has better performance for scattered pivots.
+
+    Best Case Complexity [Big-omega]: O(n*log n)
+        It occurs when the pivot element is always the middle element or near to the middle element.
+
+    Average Case Complexity [Big-theta]: O(n*log n)
+        It occurs when the above conditions do not occur.
+
+Space Complexity: 
+
+The space complexity for quicksort is O(log n).
+
+
+For more: https://www.programiz.com/dsa/quick-sort
