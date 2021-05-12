@@ -1,0 +1,32 @@
+Infix Expression: Infix Expression is of the form variable1 operator variable2
+
+Examples are :
+
+    1. a + b
+    2. (a+b) - (a-b)
+
+PostFix Expression: Postfix Expression is of the form variable1 variable2 operator. They are notations to express expressions without bracket.
+
+Examples are :
+
+    1. ab+
+    2. ab+cd+
+
+How can we convert from Infix to Postfix:
+
+Before we try to find how can we can convert this? Lets try to understand how would we have done this manually, and what we need to convert the expression?
+
+For example:
+
+We have to convert [operand1 operator operator2] to [operand1 operand2 operator] for converting infix to postfix operation, considering precedence of the operators.
+
+To convert (a+b) - (a-b):
+
+    1. () takes first precedence, hence we will convert (a+b) to ab+ and store this somewhere.
+    2. Next - is stored somewhere.
+    3. Next we will convert (a-b) to ab- and store this somewhere.
+    4. Then we will take both ab+, ab- and - operator in between, and hence, will convert      [operand1  operator operator2] to [operand1 operand 2 operator] i.e ab+ab--
+
+Operator Precedence:
+
+[+,-]  <  [*,/,%]  <  [^] 
