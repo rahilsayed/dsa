@@ -36,3 +36,5 @@ class Solution:
             return 0
         else:
             return self.s1[-1]
+
+
