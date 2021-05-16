@@ -34,7 +34,7 @@ class Node:
                 print(False)
                 return
             return self.right.search(val)
-        else:
+        elif self.data == val:
             print(True)
             return
     
