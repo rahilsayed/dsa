@@ -27,6 +27,10 @@ a = [1,0,2,9,3,8,4,7,5,6]
 quicksort(a,0,len(a) - 1)
 print(a)
 
+'''
+Ouput:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+'''
 
 #Time Complexity: O(n*log(n))
 #Space Complexity: O(log(n))

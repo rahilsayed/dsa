@@ -6,7 +6,7 @@ def binary_search_rec(arr,key,start,end):
     if start > end:
         return 
 
-    mid = (start + end) // 2
+    mid = (start + end) // 2  #in case of large values, we use mid = (start + (end - start)) // 2
 
     #base condition
     if arr[mid] == key:
@@ -20,7 +20,13 @@ def binary_search_rec(arr,key,start,end):
 
 #sample test case
 arr = [1,3,6,10,16,22]
-print(binary_search_rec(arr,10,0,len(arr)))
+print(binary_search_rec(arr,10,0,len(arr) - 1))
+
+'''
+Output:
+3
+'''
+
 
 #Time Complexity: O(log(n))
 #Space Complexity: O(1)

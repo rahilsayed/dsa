@@ -12,5 +12,10 @@ arr = [1,0,2,9,3,84,7,5,6]
 key = 3
 print(linear_search(arr,key)) 
 
+'''
+Output: 
+4 
+'''
+
 #Time Complexity: O(n)
 #Space Complexity: O(1) 
