@@ -76,6 +76,23 @@ class LinkedList:
             print(temp.data, end = " ")
             temp = temp.next
 
+    #function to check if a linked list has cycles in it or not
+    def hasCycle(self):
+        temp = self.head
+        fast_ptr = slow_ptr = temp
+        #increment the slow pointer by 1 and fast pointer by 2
+        #if they become equal at some point, then a cycle exist and will return true
+        #else, slow pointer or fast pointer will eventuall come to null and hence 
+        #the while loop will break and return false
+        while fast_ptr and slow_ptr and fast_ptr.next:
+            slow_ptr = slow_ptr.next
+            fast_ptr = fast_ptr.next.next
+            if slow_ptr == fast_ptr:
+                print(True)
+                return
+            print(False)
+            return
+
 
 #sample test case
 ll = LinkedList()
@@ -87,3 +104,4 @@ ll.remove(9)
 ll.search(9)
 ll.insertIndex(3,0)
 ll.display()
+ll.hasCycle()

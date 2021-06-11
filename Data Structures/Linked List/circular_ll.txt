@@ -1,0 +1,29 @@
+What is a Circular linked list?
+   - In a Circular linked list, the last node is connected to point to first node. Thus, there is no NULL at the end of the linked list.
+
+A circular linked list can be a singly circular linked list or doubly circular linked list.
+
+While traversing the circular linked lists we should be careful, otherwise we will be traversing the list infinitely.
+
+Inserting an element in Circular linked list:
+
+Here, we have a last pointer to the last node of the linked list. This allows insertion at the end of the list in constant time. Also, we can insert in beginning by getting first node as next of last node. So this will also take constant time irrespective of length of the list.
+
+Insertion can have following cases:
+
+1. Inserting an element in empty Circular linked list.
+2. Inserting an element in the beginning of the Circular linked list.
+3. Inserting an element at the end of the Circular linked list.
+4. Insert an element at after an element in the Circular linked list.
+
+
+Advantage of Circular Linked List
+1. We need circular linked list when we want to access all the nodes, if we start from any node. E.g. For managing memory for resources, all resources should get memory in cyclic fashion, hence can maintain this via circular linked list.
+2. In a singly linked list, for accessing any node of linked list, we have to start from head node only. Here, we can traverse even if we are at the middle of the list.
+3. Useful for implementation of queue. We can keep track of both front and rear using last pointer.
+4. Useful for implementation of stack. We can keep track of top using next of last pointer
+
+Disadvantage of Circular Linked List
+1. It is not easy to reverse the linked list.
+2. If proper care is not taken, then the problem of infinite loop can occur.
+3. If we are at a node and go back to the previous node, then we can not do it in single step, we have to complete circle for this.

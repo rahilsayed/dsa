@@ -1,0 +1,12 @@
+What is a doubly linked list?
+  -  A doubly linked list maintains an extra pointer to the previous node in addition to the pointer to the next node as in singly linked list.
+
+1. Each node has a prev and next pointer
+2. Prev of first node points to null.
+3. Next of last node points to null.
+
+Inserting an element in doubly linked list can have three cases:
+
+1. Inserting an element in the beginning of the doubly linked list.
+2. Inserting an element at the end of the doubly linked list.
+3. Insert an element at after an element in the doubly linked list.
