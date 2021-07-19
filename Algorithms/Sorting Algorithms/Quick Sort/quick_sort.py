@@ -17,6 +17,7 @@ def partition(arr,start,end):
     return i + 1
 
 def quicksort(arr,start,end):
+    #base case: till only two elements in array
     if start < end:
         pivot_position = partition(arr,start,end)
         quicksort(arr,start,pivot_position - 1)

@@ -28,7 +28,7 @@ class LinkedList:
             temp = temp.next
         temp.next = n
 
-    def remove(self,val):
+    def removeByVal(self,val):
         temp = self.head
         if temp.data == val:
             self.head = temp.next
@@ -41,6 +41,30 @@ class LinkedList:
         if not temp.next:
             return
         temp.next = temp.next.next
+
+    def removeFromEnd(self,n):
+        temp  = self.head
+        length = 0
+        while temp:
+            temp = temp.next
+            length += 1
+        pos = length - n + 1
+        if pos == 1 or n > length:
+            self.head = self.head.next
+            return
+        if pos == length:
+            temp = self.head
+            while temp.next.next != None:
+                temp = temp.next
+            temp.next = None
+            return
+        temp = self.head
+        count = 0
+        while temp and count < pos - 2:
+            temp = temp.next
+            count += 1
+        temp.next = temp.next.next
+        return
 
     def search(self,val):
         temp = self.head
@@ -100,8 +124,10 @@ ll.insert(7)
 ll.insert(8)
 ll.insert(6)
 ll.insert(9)
-ll.remove(9)
+ll.removeByVal(9)
 ll.search(9)
 ll.insertIndex(3,0)
-ll.display()
 ll.hasCycle()
+ll.display()
+ll.removeFromEnd(2)
+ll.display()
