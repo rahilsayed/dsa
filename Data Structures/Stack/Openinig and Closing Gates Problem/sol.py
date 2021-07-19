@@ -60,7 +60,7 @@ def check(gates):
 
 
 #sample test case
-gates = '(())'
+gates = '(()(()(())))'
 check_gates = check(gates)
 if check_gates == -1:
     print("Not Secure")
